@@ -1,5 +1,5 @@
 // Punto base de la API local (ajusta el puerto si usas otro)
-const API = "http://localhost:3001/contactos";
+const API = "http://localhost:3002/contactos";
 
 // GET: listar contactos
 export async function listarContactos() {
