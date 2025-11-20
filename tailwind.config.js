@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// Instructor: Gustavo Bolaños – Curso: Desarrollo Web – ReactJS (Agenda ADSO)
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
