@@ -7,6 +7,38 @@
       "correo": "stivenhuv@gmail.com",
       "etiqueta": "estudiante",
       "empresa": "SENA"
+    },
+    {
+      "id": "8def",
+      "nombre": "Valentina Ocampo Ortiz",
+      "telefono": "3024556677",
+      "correo": "vaye@gmail.com",
+      "etiqueta": "Trabajadora",
+      "empresa": "Chock Chock"
+    },
+    {
+      "id": "956a",
+      "nombre": "Liney Astrid Valencia Pareja",
+      "telefono": "3005544422",
+      "correo": "Liney@gmail.com",
+      "etiqueta": "Vendedora",
+      "empresa": "Postres Maravilla"
+    },
+    {
+      "id": "6776",
+      "nombre": "Donital Hurtado Maldonado",
+      "telefono": "3013322211",
+      "correo": "alhuma40@gmail.com",
+      "etiqueta": "Soldado",
+      "empresa": "FBI"
+    },
+    {
+      "id": "60b3",
+      "nombre": "Luis Hurtado Mejia",
+      "telefono": "3056789999",
+      "correo": "lucho@gmail.com",
+      "etiqueta": "Trabajador",
+      "empresa": "Tintas y Tintas"
     }
   ]
 }

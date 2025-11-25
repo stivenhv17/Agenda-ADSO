@@ -80,17 +80,19 @@ function App() {
     }
   };
 
-  // === BÚSQUEDA ===
+  // === BÚSQUEDA (nombre, correo, etiqueta y teléfono) ===
   const contactosFiltrados = contactos.filter((c) => {
     const termino = busqueda.toLowerCase();
     const nombre = c.nombre.toLowerCase();
     const correo = c.correo.toLowerCase();
     const etiqueta = (c.etiqueta || "").toLowerCase();
+    const telefono = String(c.telefono || "").toLowerCase();
 
     return (
       nombre.includes(termino) ||
       correo.includes(termino) ||
-      etiqueta.includes(termino)
+      etiqueta.includes(termino) ||
+      telefono.includes(termino)
     );
   });
 
@@ -137,11 +139,11 @@ function App() {
             <FormularioContacto onAgregar={onAgregarContacto} />
 
             {/* Buscador + Orden */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-2">
               <input
                 type="text"
                 className="w-full md:flex-1 rounded-xl border-gray-300 focus:ring-purple-500 focus:border-purple-500 text-sm"
-                placeholder="Buscar por nombre, correo o etiqueta..."
+                placeholder="Buscar por nombre, correo, etiqueta o teléfono..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
               />
@@ -154,6 +156,13 @@ function App() {
                 {ordenAsc ? "Ordenar Z-A" : "Ordenar A-Z"}
               </button>
             </div>
+
+            {/* Cantidad de resultados */}
+            <p className="text-sm text-gray-600 mb-4">
+              {contactosOrdenados.length} contacto
+              {contactosOrdenados.length !== 1 ? "s" : ""} encontrado
+              {contactosOrdenados.length !== 1 ? "s" : ""}
+            </p>
 
             {/* Listado */}
             <section className="space-y-4">
